@@ -1,7 +1,9 @@
 Task Manager Backend
+
 This project is a backend server for managing tasks. It allows users to register, log in, and perform operations related to task management. The backend is built using Node.js, Express.js, and MongoDB.
 
 Features
+
 User registration and login
 Authentication using JSON Web Tokens (JWT)
 Create, update, delete, and get tasks
