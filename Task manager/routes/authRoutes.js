@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
-const User = require('../models/user');
+const User = require('../models/User');
 
 router.post('/register', async (req, res) => {
   const { username, password } = req.body;
@@ -10,7 +10,7 @@ router.post('/register', async (req, res) => {
     await user.save();
     res.status(201).json({ message: 'User created' });
   } catch (err) {
-    console.error('Registration Error:', err);  // ✅ Log real error
+    console.error('Registration Error:', err);  
     res.status(400).json({ message: 'Error creating user', error: err.message });
   }
 });
